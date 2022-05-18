@@ -13,7 +13,9 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="style.css" />
+
     <title>ITBANK Frontend</title>
   </head>
   <body>
@@ -38,7 +40,7 @@
               <a href="#questions" class="nav-link">preguntas</a>
             </li>
             <li class="nav-item">
-              <a href="#instructores" class="nav-link">Contacto</a>
+              <a href="#contacto" class="nav-link">Contacto</a>
             </li>
           </ul>
         </div>
@@ -220,10 +222,41 @@
 </div>
       </div>
     </section>
+    <!--contacto y mapa-->
+    <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Informacion de contacto</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Nos encontramos en:</span> Lavardén 315
+Ciudad Autónoma de Buenos Aires
+                <li class="list-group-item">
+                <span class="fw-bold">nuestro numero de telefono:</span> 112341241123
+                <li class="list-group-item">
+                <span class="fw-bold">nuestro Email:</span> itbankprueba@gmail.com
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+              <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
+    <script>mapboxgl.accessToken = 'pk.eyJ1IjoibmFjaG9ydnciLCJhIjoiY2wzYXhkbmswMDFoYzNqb2l5dzY0ejI0YSJ9.FDg3ieFYWn42h6x9QXukxw';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [-34.64086626231588, -58.401881175978765],
+zoom:18,
+});</script>
   </body>
 </html>
